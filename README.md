@@ -1,10 +1,9 @@
 # KOPinCodeView
-
-[![CI Status](http://img.shields.io/travis/Oleksandr Khymych/KOPinCodeView.svg?style=flat)](https://travis-ci.org/Oleksandr Khymych/KOPinCodeView)
 [![Version](https://img.shields.io/cocoapods/v/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![License](https://img.shields.io/cocoapods/l/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![Platform](https://img.shields.io/cocoapods/p/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
-
+## Screenshot
+![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/KOPinCodeView.gif?raw=true)
 ## Setup with CocoaPods
 * Add ```pod 'KOPinCodeView'``` to your Podfile
 * Run ```pod install```
@@ -41,13 +40,17 @@ Example code:
 ```objc
 KOPinCodeView *pinCodeView = [[KOPinCodeView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 65)];
 [self.view addSubview:pinCodeView];
+//Pin Code View with cout symbol custom settings example:
+pinCodeView.formPinView = kFoursquare;
+//init PinCodeView with cout symbol example
 [pinCodeView initPinWithCountView:4];
 ```
 
-Pin Code View with cout symbol custom settings example:
+init PinCodeView with confirm example
 ```objc
-pinCodeView.formPinView = kFoursquare;
+[self.pinCodeConfirmView initPinViewWithConfirmPIN:YES countSymbol:6 sizeSimbol:CGSizeMake(45, 45) formView:kCircle];
 ```
+
 Pin Code View with confirm custom settings example:
 ```objc
 //thickness view line
