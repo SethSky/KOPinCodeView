@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/cocoapods/l/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![Platform](https://img.shields.io/cocoapods/p/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 ## Screenshot
-![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/KOPinCodeView.gif?raw=true)
+![KOPinCodeView](https://raw.githubusercontent.com/SethSky/KOPinCodeView/master/KOPinCodeView.gif)
 ## Setup with CocoaPods
 * Add ```pod 'KOPinCodeView'``` to your Podfile
 * Run ```pod install```
