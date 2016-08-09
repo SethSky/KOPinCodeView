@@ -2,56 +2,64 @@
 [![Version](https://img.shields.io/cocoapods/v/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![License](https://img.shields.io/cocoapods/l/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![Platform](https://img.shields.io/cocoapods/p/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
-## Screenshot
-![KOPinCodeView](https://raw.githubusercontent.com/SethSky/KOPinCodeView/master/KOPinCodeView.gif)
-## Setup with CocoaPods
-* Add ```pod 'KOPinCodeView'``` to your Podfile
-* Run ```pod install```
-* Run ```open App.xcworkspace```
-
-### Objective-C
-```objc 
-#import <KOPinCodeView/KOPinCodeView.h> //in your controller's header file
-``` 
-
-### Swift
-If you are using `use_frameworks!` in your Podfile, use this import:
-```swift
-import KOPinCodeView
-```
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
-
 KOPinCodeView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "KOPinCodeView"
 ```
+### Objective-C
+```objc 
+#import <KOPinCodeView/KOPinCodeView.h> //in your controller's header file
+``` 
+### Swift
+If you are using `use_frameworks!` in your Podfile, use this import:
+```swift
+import KOPinCodeView
+```
 ## Usage
 ### In Objective-C
-Example code:
+##### Init methods
+#
 ```objc
+//init PinCodeView with cout symbol
+-(void)initPinWithCountView:(int)count;
+
+//init PinCodeView with confirm or custom view
+-(void)initPinViewWithConfirmPIN:(BOOL)confirm
+                     countSymbol:(int)count
+                      sizeSimbol:(CGSize)size
+                        formView:(FormView)form;
+```
+##### Init methods KOPinCodeViewDelegate
+#
+```objc
+// delegate method. Called when entered all simbols.
+// it returned symbols array and string with all symbols.
+- (void)pinDidEnterAllSymbol:(NSArray *)symbolArray string:(NSString*)pin;
+```
+Creating a Pin Code View 
+* Example code:
+```objc
+//1. init with frame
 KOPinCodeView *pinCodeView = [[KOPinCodeView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 65)];
+//2. Add to you view
 [self.view addSubview:pinCodeView];
-//Pin Code View with cout symbol custom settings example:
-pinCodeView.formPinView = kFoursquare;
-//init PinCodeView with cout symbol example
+//3. setting the delegate:
+pinCodeView.delegate = self;
+//or just add view in storyboard  
+```
+```objc
+//and init PinCodeView with cout symbol example
 [pinCodeView initPinWithCountView:4];
 ```
-
-init PinCodeView with confirm example
+* init PinCodeView with confirm example:
 ```objc
 [self.pinCodeConfirmView initPinViewWithConfirmPIN:YES countSymbol:6 sizeSimbol:CGSizeMake(45, 45) formView:kCircle];
 ```
 
-Pin Code View with confirm custom settings example:
+* Pin Code View with confirm custom settings example:
 ```objc
 //thickness view line
 self.pinCodeConfirmView.lineDeep = 2.f;
