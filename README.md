@@ -32,15 +32,16 @@ import KOPinCodeView
                       sizeSimbol:(CGSize)size
                         formView:(FormView)form;
 ```
-##### Init methods KOPinCodeViewDelegate
+##### Delegate methods KOPinCodeViewDelegate
 #
 ```objc
 // delegate method. Called when entered all simbols.
 // it returned symbols array and string with all symbols.
 - (void)pinDidEnterAllSymbol:(NSArray *)symbolArray string:(NSString*)pin;
 ```
-Creating a Pin Code View 
-* Example code:
+##### Creating a Pin Code View 
+###### Example code:
+#
 ```objc
 //1. init with frame
 KOPinCodeView *pinCodeView = [[KOPinCodeView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 65)];
@@ -54,12 +55,14 @@ pinCodeView.delegate = self;
 //and init PinCodeView with cout symbol example
 [pinCodeView initPinWithCountView:4];
 ```
-* init PinCodeView with confirm example:
+###### init PinCodeView with confirm example:
+#
 ```objc
 [self.pinCodeConfirmView initPinViewWithConfirmPIN:YES countSymbol:6 sizeSimbol:CGSizeMake(45, 45) formView:kCircle];
 ```
 
-* Pin Code View with confirm custom settings example:
+###### Pin Code View with confirm custom settings example:
+#
 ```objc
 //thickness view line
 self.pinCodeConfirmView.lineDeep = 2.f;
@@ -91,7 +94,6 @@ self.pinCodeConfirmView.secure = NO;
 self.pinCodeConfirmView.typeKeyboard = UIKeyboardTypeNumberPad;
 ```
 ## Author
-
 Oleksandr Khymych, seth@khymych.com
 
 ## License
