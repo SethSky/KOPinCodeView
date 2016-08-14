@@ -1,7 +1,19 @@
+## Overview
+KOPinCodeView is a completed view developed for PIN-code entering. 
+
+Key features and advantages:
+ - easy for integrating in controller;
+ - wide visual customization; 
+ - automatically creates TextField and background view according to self view;
+ - optional PIN-code confirmation with integrated permission control; 
+ - able to set number of cells for PIN-code entering.
+![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/pin_code_view.gif?raw=true)
+![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/pin_code_view_confirm.gif?raw=true)
 # KOPinCodeView
 [![Version](https://img.shields.io/cocoapods/v/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![License](https://img.shields.io/cocoapods/l/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 [![Platform](https://img.shields.io/cocoapods/p/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
+
 ## Installation
 KOPinCodeView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
