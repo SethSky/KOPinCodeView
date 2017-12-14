@@ -8,8 +8,8 @@ Key features and advantages:
  - optional PIN-code confirmation with integrated permission control; 
  - able to set number of cells for PIN-code entering.
 
-![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/pin_code_view.gif?raw=true)
-![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/KOPinCodeView/Assets/pin_code_view_confirm.gif?raw=true)
+![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/Source/Assets/pin_code_view.gif?raw=true)
+![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/Source/Assets/pin_code_view_confirm.gif?raw=true)
 
 
 # KOPinCodeView
@@ -27,9 +27,9 @@ Key features and advantages:
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build KOLocalizedString 0.0.1+.
+> CocoaPods 1.1+ is required to build KOPinCodeView 0.1.0+.
 
-To integrate KOLocalizedString into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate KOPinCodeView into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
