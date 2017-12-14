@@ -1,10 +1,3 @@
-//
-//  KOPinCodeView.h
-//  KOPinCodeView
-//
-//  Created by Oleksandr Khymych on 01.07.16.
-//  Copyright © 2016 Oleksandr Khymych. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
@@ -16,24 +9,26 @@ typedef enum FormView : NSUInteger {
 } FormView;
 
 @protocol KOPinCodeViewDelegate <NSObject>
-
 @required
-
-// delegate method. Called when entered all simbols.
-// it returned symbols array and string with all symbols.
+/**
+ delegate method. Called when entered all simbols.
+ it returned symbols array and string with all symbols.
+ 
+ @param symbolArray NSArray with NSString
+ @param pin NSString
+ */
 - (void)pinDidEnterAllSymbol:(NSArray *)symbolArray string:(NSString*)pin;
-
 @end
 
-
+/**
+ KOPinCodeView
+ */
 @interface KOPinCodeView : UIView
-
-
+/**
+ KOPinCodeViewDelegate
+ */
 @property (nonatomic, weak) IBOutlet id<KOPinCodeViewDelegate> delegate;
-
 //Customized view settings
-
-
 //------------------------------------------------------|
 //---UIView---------------------------------------------|
 //------------------------------------------------------|
@@ -75,20 +70,30 @@ typedef enum FormView : NSUInteger {
 @property (nonatomic) BOOL secure;
 //Keyboard Type
 @property (nonatomic) UIKeyboardType typeKeyboard;
-
 //------------------------------------------------------|
 //---Methods--------------------------------------------|
 //------------------------------------------------------|
-
-//init PinCodeView with cout symbol
+/**
+ init PinCodeView with cout symbol
+ @param count int
+ */
 -(void)initPinWithCountView:(int)count;
-
-//init PinCodeView with confirm
+/**
+ init PinCodeView with confirm
+ 
+ @param confirm BOOL value
+ @param count int
+ @param size CGSize
+ @param form FormView type view
+ */
 -(void)initPinViewWithConfirmPIN:(BOOL)confirm
                      countSymbol:(int)count
                       sizeSimbol:(CGSize)size
                         formView:(FormView)form;
 
+/**
+ Become first cell
+ */
 -(void)becomeFirstCell;
 
 @end

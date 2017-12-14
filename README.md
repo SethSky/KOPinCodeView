@@ -18,23 +18,46 @@ Key features and advantages:
 [![Platform](https://img.shields.io/cocoapods/p/KOPinCodeView.svg?style=flat)](http://cocoapods.org/pods/KOPinCodeView)
 
 ## Installation
-KOPinCodeView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 1.1+ is required to build KOLocalizedString 0.0.1+.
+
+To integrate KOLocalizedString into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod "KOPinCodeView"
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target '<Your Target Name>' do
+pod 'KOPinCodeView', '~> 0.1.1'
+end
 ```
-### Objective-C
-```objc 
-#import <KOPinCodeView/KOPinCodeView.h> //in your controller's header file
-``` 
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+## Usage
+
 ### Swift
 If you are using `use_frameworks!` in your Podfile, use this import:
 ```swift
 import KOPinCodeView
 ```
-## Usage
 ### In Objective-C
+
+```objc
+#import <KOPinCodeView/KOPinCodeView.h> //in your controller's header file
+```
 ##### Init methods
 #
 ```objc
@@ -112,4 +135,4 @@ self.pinCodeConfirmView.typeKeyboard = UIKeyboardTypeNumberPad;
 Oleksandr Khymych, seth@khymych.com
 
 ## License
-KOPinCodeView is available under the MIT license. See the LICENSE file for more info.
+KOPinCodeView is released under the MIT license. [See LICENSE](LICENSE) for details.
