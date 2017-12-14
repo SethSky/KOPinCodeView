@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+target 'KOPinCodeView' do
+  pod 'KOPinCodeView'
+  target 'KOPinCodeViewTests' do
+    inherit! :search_paths
+    pod 'KOPinCodeView'
+  end
+end
