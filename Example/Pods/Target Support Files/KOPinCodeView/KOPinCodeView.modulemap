@@ -1,6 +1,0 @@
-framework module KOPinCodeView {
-  umbrella header "KOPinCodeView-umbrella.h"
-
-  export *
-  module * { export * }
-}
