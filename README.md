@@ -7,9 +7,11 @@ Key features and advantages:
  - automatically creates TextField and background view according to self view;
  - optional PIN-code confirmation with integrated permission control; 
  - able to set number of cells for PIN-code entering.
-
-![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/Source/Assets/pin_code_view.gif?raw=true)
-![KOPinCodeView](https://github.com/SethSky/KOPinCodeView/blob/master/Source/Assets/pin_code_view_confirm.gif?raw=true)
+ 
+<div align="center">
+<img src="Source/Assets/pin_code_view.gif" width="225" height="400">
+<img src="Source/Assets/pin_code_view_confirm.gif" width="225" height="400">
+</div>
 
 
 # KOPinCodeView
